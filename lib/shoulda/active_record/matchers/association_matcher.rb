@@ -179,7 +179,7 @@ module Shoulda # :nodoc:
         end
 
         def model_class
-          @subject.class
+          @subject.is_a?(Class) ? @subject : @subject.class
         end
 
         def join_table
